@@ -8,19 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+    - name: setup cmake
+      run: sudo apt install cmake
 
-    - name: tshirts fail
+    - name: build
       run: |
-        g++ -Wall -Wextra -Werror tshirts.cpp -o tshirts.out
-        bash .github/workflows/expectfail.sh ./tshirts.out
-
-    - name: misaligned fail
-      run: |
-        g++ -Wall -Wextra -Werror misaligned.cpp -o misaligned.out
-        bash .github/workflows/expectfail.sh ./misaligned.out
-
-    - name: alerter fail
-      run: |
-        g++ -Wall -Wextra -Werror weatherreport.cpp -o weatherreport.out
-        bash .github/workflows/expectfail.sh ./weatherreport.out
+        cmake -S . -B build
+        cmake --build build
+      
+    - name: expect failures in run
+      run: build/strong_tests

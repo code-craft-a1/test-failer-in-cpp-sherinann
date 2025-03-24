@@ -1,6 +1,6 @@
 # Testing & Dependencies
 
-Decomposition = Making smaller pieces of code - makes testing easier. Just as smaller sentences help us convey our intentions better.
+Decomposition = Making smaller pieces of code - makes testing easier.
 
 Testing = Specifying the output - drives us to decompose better.
 
@@ -8,11 +8,11 @@ Welcome to Test Driven Development. The positive cycle of Testability and Decomp
 
 ## Make the tests fail
 
-This exercise has a set of buggy implementations. The implementations also have tests (asserts) which pass, despite the bugs. They are 'weak' tests. Such tests are ineffective - you will need to manually check the code anyway.
+This exercise has a set of buggy implementations. The implementations also have tests (asserts) which pass, despite the bugs. They are 'weak' tests. Such tests are inefficient - you will need to manually check the code anyway.
 
 Your task is to _strengthen the tests_ and make them all fail. You **can refactor** the code to separate the concerns and make it testable. **Do not fix the bug. Do not pass the tests yet**
 
-In this repository, the workflows are designed to make the Action fail when any of the tests pass.
+In this repository, all the tests pass. However, it's a 'false pass'. Your goal is to make them fail and expose the bugs.
 
 ## Hints
 
@@ -25,5 +25,5 @@ give values that expose the mistake. Add a stub to do that.
 
 # Extra challenge
 
-In several places, test-code is mixed with production code.
+In several places, test-code is together with production code.
 Can you think of a way to separate things - so that the production code doesn't change while switching from the unit-test-environment to the integration-environment?

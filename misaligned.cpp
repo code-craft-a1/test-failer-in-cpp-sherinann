@@ -13,9 +13,9 @@ int printColorMap() {
     return i * j;
 }
 
-int main() {
+void testPrintColorMap() {
+    std::cout << "\nPrint color map test\n"; 
     int result = printColorMap();
     assert(result == 25);
     std::cout << "All is well (maybe!)\n";
-    return 0;
 }

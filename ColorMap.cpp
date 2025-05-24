@@ -21,7 +21,7 @@ std::string GenerateColorPairString(int majorColorIndex, int minorColorIndex)
         return "Invalid color index";
     }
     auto majorColor = GetMajorColors()[majorColorIndex];
-    
+
     // Passing major color index to fail the test
     auto minorColor = GetMinorColors()[majorColorIndex];
 
@@ -34,9 +34,9 @@ std::string GenerateColorPairString(int majorColorIndex, int minorColorIndex)
 int PrintColorMap() 
 {
     int i = 0, j = 0;
-    for(int i = 0; i < 5; i++) 
+    for(i = 0; i < 5; i++) 
     {
-        for(int j = 0; j < 5; j++) 
+        for(j = 0; j < 5; j++) 
         {
             std::string colorPairString = GenerateColorPairString(i,j);
             std::cout<<colorPairString;

@@ -44,12 +44,12 @@ namespace WeatherSpace
     {
         int Humidity() const override
         {
-            return 72;
+            return 71;
         }
 
         int Precipitation() const override
         {
-            return 70;
+            return 71;
         }
 
         double TemperatureInC() const override
